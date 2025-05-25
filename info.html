@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome untuk icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+
+            background-color: #808080 !important;
+        }
+
+        .profile-section {
+            background-color: #e0e0e0 !important;
+            padding: 25px 0;
+            margin-top: -8px;
+        }
+
+        .profile-icon img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .verified-badge {
+            color: #4caf50;
+            font-size: 12px;
+        }
+
+        .donation-section {
+            background-color: #ffffff;
+        }
+
+        .donation-section h5.text-primary {
+            color: #2d3e50 !important;
+        }
+
+        .audio-section {
+            background-color: #808080 !important;
+            border-radius: 5px;
+        }
+
+        .audio-icon {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .story-section {
+            border-top: 8px solid #f0f0f0;
+        }
+
+        .bottom-picture {
+            background-color: #808080;
+            height: 200px;
+        }
+
+        .action-buttons .btn:first-child {
+            border-right: 1px solid #9a9a9a;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header dengan tombol kembali -->
+    <div class="header bg-secondary text-white" style="height: 300px;">
+        <div class="position -absolute top-0 end-0">
+            <a href="category.html" class="btn btn-link text-white m-3 back-button"><i class="fas fa-chevron-left"></i></a>
+        </div>
+    </div>
+
+    <!-- Profil penggalang -->
+    <div class="profile-section bg-light py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <div class="profile-icon">
+                        <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-circle border">
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="profile-info">
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-0">Nama penggalang</h6>
+                            <span class="verified-badge ms-2"><i class="fas fa-check-circle"></i></span>
+                        </div>
+                        <small class="text-muted">Identitas Terverifikasi</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Judul dan Donasi Section -->
+    <div class="donation-section py-3">
+        <div class="container">
+            <h5 class="text-primary">Lorem Ipsum Dolor sir Amet</h5>
+
+            <div class="mt-3">
+                <p class="text-muted mb-1">Donasi terkumpul</p>
+                <h5 class="fw-bold">Rp 1.170.098</h5>
+            </div>
+
+            <!-- Audio section -->
+            <div class="audio-section bg-secondary text-white p-2 my-3 d-flex align-items-center">
+                <div class="audio-icon me-2">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="audio-text small">
+                    Lorem ipsum dolor sir amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cerita Penggalangan Dana -->
+    <div class="story-section bg-white py-3">
+        <div class="container">
+            <h5 class="mb-2">Cerita Penggalangan Dana</h5>
+            <small class="text-muted">04 Februari 2024</small>
+
+            <div class="story-content mt-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <!-- Bottom picture -->
+            <div class="bottom-picture text-center mt-3">
+                <div class="bg-secondary text-white d-flex h-100 align-items-center justify-content-center"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Action Buttons -->
+    <div class="action-button">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100 py-3">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                <div class="col-9">
+                    <a href="payment.html" class="btn btn-secondary text-white w-100 py-3">
+                        Donasi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

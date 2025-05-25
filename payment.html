@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Donasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            padding-bottom: 80px;
+        }
+
+        .header {
+            background-color: #808080;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .donation-form {
+            max-width: 700px;
+            padding: 0 15px;
+        }
+
+        .donation-btn {
+            background-color: #808080;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .donation-btn:hover {
+            background-color: #707070;
+        }
+
+        .custom-amount {
+            background-color: #d3d3d3;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .custom-amount-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .custom-input-container {
+            display: flex;
+            background-color: #808080;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .input-prefix {
+            background-color: #808080;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+
+        .custom-input {
+            flex: 1;
+            border: none;
+            background-color: #808080;
+            color: white;
+            padding: 15px;
+            outline: none;
+        }
+
+        .bottom-button-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background-color: #f0f0f0;
+        }
+
+        .payment-btn {
+            background-color: #808080;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="position-relative header text-center text-white py-3">
+        <div class="position-absolute top-0 start-0">
+            <a href="info.html" class="btn btn-link text-white m-2 back-button"><i class="fas fa-chevron-left"></i></a>
+        </div>
+        <h5 class="mb-0">Lorem ipsum</h5>
+    </div>
+
+    <!-- Form Donasi -->
+    <div class="container donation-form mt-4">
+        <h5 class="text-center mb-4">Masukkan Nominal Donasi</h5>
+
+        <!-- Button Groups -->
+        <div class="donation-buttons d-flex flex-column gap-3">
+            <!-- Rp 20.000 -->
+            <button class="btn donation-btn">
+                Rp20.000
+            </button>
+
+            <!-- Rp 30.000 -->
+            <button class="btn donation-btn">
+                Rp30.000
+            </button>
+
+            <!-- Rp 40.000 -->
+            <button class="btn donation-btn">
+                Rp40.000
+            </button>
+
+            <!-- Rp 50.000 -->
+            <button class="btn donation-btn">
+                Rp50.000
+            </button>
+
+            <!-- Rp 100.000 -->
+            <button class="btn donation-btn">
+                Rp100.000
+            </button>
+        </div>
+
+        <!-- Custom Amount -->
+        <div class="custom-amount mt-4">
+            <div class="custom-amount-label">
+                Masukkan Nominal Lainnya
+            </div>
+            <div class="custom-input-container">
+                <div class="input-prefix">Rp</div>
+                <input type="text" class="custom-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Bottom Button -->
+    <div class="bottom-button-container">
+        <button class="btn payment-btn">
+            Bayar
+        </button>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
