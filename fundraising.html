@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pengajuan Penggalangan Dana</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .main-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .back-arrow {
+      font-size: 20px;
+      color: #333;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    .header-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+
+    .tab-navigation {
+      display: flex;
+      margin-bottom: 30px;
+    }
+
+    .tab-item {
+      padding: 12px 0;
+      margin-right: 40px;
+      text-decoration: none;
+      color: #666;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .tab-item.active {
+      color: #333;
+      border-bottom-color: #333;
+      font-weight: 600;
+    }
+
+    .campaign-image {
+      width: 100%;
+      height: 200px;
+      background: url('https://niitaka.co.id/wp-content/uploads/2021/10/donasi-njm-top.jpg') center/cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .campaign-details {
+      margin-bottom: 30px;
+    }
+
+    .source-link {
+      color: #666;
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .progress-bar-container {
+      height: 6px;
+      background-color: #e0e0e0;
+      border-radius: 3px;
+      margin: 15px 0;
+      position: relative;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #ffd700;
+      border-radius: 3px;
+      width: 2%;
+    }
+
+    .campaign-amount {
+      font-size: 20px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .campaign-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .target-amount {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .time-remaining {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .category-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .category-badge {
+      background-color: #4CAF50;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .organizer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .organizer-avatar {
+      width: 35px;
+      height: 35px;
+      background-color: #d0d0d0;
+      border-radius: 50%;
+    }
+
+    .organizer-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .steps-section {
+      background-color: #f8f9fa;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+    }
+
+    .steps-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .steps-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+
+    .step-item {
+      flex: 1;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: white;
+      border: 2px solid #e0e0e0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      margin: 0 auto 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .step-label {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.3;
+    }
+
+    .add-campaign-section {
+      text-align: center;
+    }
+
+    .btn-add-campaign {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 14px 28px;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-add-campaign:hover {
+      background-color: #45a049;
+      transform: translateY(-1px);
+    }
+
+    .add-icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Header with Back Arrow -->
+    <div class="header-section">
+      <div class="back-arrow">‹</div>
+      <h1 class="header-title">Pengajuan Penggalangan Dana</h1>
+    </div>
+    
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+      <a href="#" class="tab-item active">Diajukan</a>
+      <a href="#" class="tab-item">Aktif</a>
+    </div>
+
+    <!-- Campaign Image with Pertamina Logo -->
+    <div class="campaign-image"></div>
+
+    <!-- Campaign Details -->
+    <div class="campaign-details">
+      <a href="#" class="source-link">ShareLight.org</a>
+      
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill"></div>
+      </div>
+
+      <div class="campaign-info">
+        <div class="campaign-amount">Rp 1.170.098</div>
+        <div class="target-amount">Target: Rp 60.000.000</div>
+      </div>
+
+      <div class="category-section">
+        <div class="category-badge">Kesehatan</div>
+        <div class="time-remaining">3 hari lagi</div>
+      </div>
+
+      <div class="organizer">
+        <div class="organizer-avatar"></div>
+        <div class="organizer-name">Shine Walker</div>
+      </div>
+    </div>
+
+    <!-- Steps Section -->
+    <div class="steps-section">
+      <h3 class="steps-title">Cara membuat Galang Dana</h3>
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-label">Isi informasi dasar</div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-label">Isi detail</div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-label">Upload media</div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-label">Konfirmasi & Submit</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Campaign Button -->
+    <div class="add-campaign-section">
+      <button class="btn-add-campaign">
+        <svg class="add-icon" viewBox="0 0 16 16">
+          <path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+        </svg>
+        Galang dana
+      </button>
+    </div>
+  </div>
+</body>
+</html>
